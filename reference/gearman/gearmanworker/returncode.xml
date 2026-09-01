@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-
-<refentry xml:id="gearmanworker.returncode" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gearmanworker.returncode">
  <refnamediv>
   <refname>GearmanWorker::returnCode</refname>
   <refpurpose>Get last Gearman return code</refpurpose>
@@ -9,13 +8,13 @@
 
  <refsect1 role="description">
   &reftitle.description;
-  <methodsynopsis>
+  <methodsynopsis role="GearmanWorker">
    <modifier>public</modifier> <type>int</type><methodname>GearmanWorker::returnCode</methodname>
-   <void />
+   <void/>
   </methodsynopsis>
-  <para>
+  <simpara>
    Returns the last Gearman return code.
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -25,23 +24,20 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
+  <simpara>
    A valid Gearman return code.
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
-  <para>
-   <simplelist>
-    <member><methodname>GearmanWorker::error</methodname></member>
-    <member><methodname>GearmanWorker::getErrno</methodname></member>
-   </simplelist>
-  </para>
+  <simplelist>
+   <member><methodname>GearmanWorker::error</methodname></member>
+   <member><methodname>GearmanWorker::getErrno</methodname></member>
+  </simplelist>
  </refsect1>
 
 </refentry>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml

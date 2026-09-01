@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-
-<refentry xml:id="gearmanclient.runtasks" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gearmanclient.runtasks">
  <refnamediv>
   <refname>GearmanClient::runTasks</refname>
   <refpurpose>Run a list of tasks in parallel</refpurpose>
@@ -9,17 +8,17 @@
 
  <refsect1 role="description">
   &reftitle.description;
-  <methodsynopsis>
+  <methodsynopsis role="GearmanClient">
    <modifier>public</modifier> <type>bool</type><methodname>GearmanClient::runTasks</methodname>
-   <void />
+   <void/>
   </methodsynopsis>
-  <para>
+  <simpara>
    For a set of tasks previously added with <methodname>GearmanClient::addTask</methodname>,
    <methodname>GearmanClient::addTaskHigh</methodname>, <methodname>GearmanClient::addTaskLow</methodname>,
    <methodname>GearmanClient::addTaskBackground</methodname>, <methodname>GearmanClient::addTaskHighBackground</methodname>, or
    <methodname>GearmanClient::addTaskLowBackground</methodname>, this call starts running the tasks
    in parallel.
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -29,22 +28,19 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
+  <simpara>
    &return.success;
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
-  <para>
-   <simplelist>
-    <member><methodname>GearmanClient::addTask</methodname></member>
-   </simplelist>
-  </para>
+  <simplelist>
+   <member><methodname>GearmanClient::addTask</methodname></member>
+  </simplelist>
  </refsect1>
 
 </refentry>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml

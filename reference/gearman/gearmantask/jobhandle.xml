@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-
-<refentry xml:id="gearmantask.jobhandle" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gearmantask.jobhandle">
  <refnamediv>
   <refname>GearmanTask::jobHandle</refname>
   <refname>gearman_job_handle</refname>
@@ -10,13 +9,13 @@
 
  <refsect1 role="description">
   &reftitle.description;
-   <methodsynopsis>
-   <modifier>public</modifier> <type>string</type><methodname>GearmanTask::jobHandle</methodname>
-   <void />
-   </methodsynopsis>
-  <para>
+   <methodsynopsis role="GearmanTask">
+   <modifier>public</modifier> <type class="union"><type>false</type><type>string</type></type><methodname>GearmanTask::jobHandle</methodname>
+   <void/>
+  </methodsynopsis>
+  <simpara>
    Returns the job handle for this task.
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -26,22 +25,19 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
-   The opaque job handle.
-  </para>
+  <simpara>
+   The opaque job handle, or &false; if the task has not yet been created.
+  </simpara>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
-  <para>
-   <simplelist>
-    <member><methodname>GearmanClient::doJobHandle</methodname></member>
-   </simplelist>
-  </para>
+  <simplelist>
+   <member><methodname>GearmanClient::doJobHandle</methodname></member>
+  </simplelist>
  </refsect1>
 
 </refentry>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml

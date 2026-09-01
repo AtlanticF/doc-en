@@ -36,6 +36,61 @@
   </para>
  </refsect1>
 
+ <refsect1 role="errors">
+  &reftitle.errors;
+  <para>
+   On invalid <parameter>file_descriptor</parameter> integer values
+   an <constant>E_WARNING</constant> is raised.
+  </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <informaltable>
+   <tgroup cols="2">
+    <thead>
+     <row>
+      <entry>&Version;</entry>
+      <entry>&Description;</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry>8.5.0</entry>
+      <entry>
+       <varname>last_error</varname> is now set to <constant>EBADF</constant>
+       when an invalid <parameter>file_descriptor</parameter> is encountered.
+      </entry>
+     </row>
+     <row>
+      <entry>8.3.0</entry>
+      <entry>
+       Type error <constant>E_WARNING</constant>s are now raised for integer
+       coercions following the usual PHP type coercion semantics.
+      </entry>
+     </row>
+     <row>
+      <entry>8.3.0</entry>
+      <entry>
+       On invalid <parameter>file_descriptor</parameter> integer values
+       an <constant>E_WARNING</constant> is now raised.
+      </entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </informaltable>
+ </refsect1>
+
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>posix_isatty</function></member>
+    <member><function>stream_isatty</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
+
 </refentry>
 <!-- Keep this comment at the end of the file
 Local variables:

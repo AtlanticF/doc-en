@@ -12,7 +12,6 @@
   <qandaset>
 
    <qandaentry xml:id="faq.using.parameterorder">
-    <!-- TODO: Mention named arguments -->
     <question>
      <para>
       I cannot remember the parameter order of PHP functions, are they random?
@@ -29,6 +28,10 @@
       <link linkend="book.strings">String functions</link> are the opposite,
       so "<emphasis>haystack, needle</emphasis>".
      </para>
+     <para>
+      As of PHP 8.0, <link linkend="functions.named-arguments">named arguments</link>
+      allow passing arguments by parameter name, making parameter order less of a concern.
+     </para>
     </answer>
    </qandaentry>
 
@@ -42,8 +45,8 @@
     <answer>
      <para>
       PHP offers many <link linkend="language.variables.predefined">
-      predefined variables</link>, like the superglobal <varname>
-      $_POST</varname>.  You may loop through <varname>$_POST</varname>
+      predefined variables</link>, like the superglobal <varname>$_POST</varname>.
+      You may loop through <varname>$_POST</varname>
       as it's an associate array of all POSTed values.  For example, let's
       simply loop through it with &foreach;, 
       check for <function>empty</function> values,
@@ -79,7 +82,6 @@ if (empty($empty)) {
    </qandaentry>
 
    <qandaentry xml:id="faq.using.addslashes">
-    <!-- TODO Probably should mention not doing this... -->
     <question>
      <para>
       I need to convert all single-quotes (') to a backslash 
@@ -97,6 +99,12 @@ if (empty($empty)) {
       also the generic <function>addslashes</function> and
       <function>stripslashes</function> functions, that are more
       common with older PHP code.
+     </para>
+     <para>
+      Manually escaping values is error-prone and depends on context.
+      Prefer using database APIs that support prepared statements and
+      parameter binding instead of constructing queries by concatenating
+      escaped strings.
      </para>
     </answer>
    </qandaentry>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-
-<refentry xml:id="gearmanjob.unique" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gearmanjob.unique">
  <refnamediv>
   <refname>GearmanJob::unique</refname>
   <refpurpose>Get the unique identifier</refpurpose>
@@ -9,13 +8,13 @@
 
  <refsect1 role="description">
   &reftitle.description;
-  <methodsynopsis>
-   <modifier>public</modifier> <type>string</type><methodname>GearmanJob::unique</methodname>
-   <void />
+  <methodsynopsis role="GearmanJob">
+   <modifier>public</modifier> <type class="union"><type>false</type><type>string</type></type><methodname>GearmanJob::unique</methodname>
+   <void/>
   </methodsynopsis>
-  <para>
+  <simpara>
    Returns the unique identifier for this job.  The identifier is assigned by the client.
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -25,23 +24,20 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
-   An opaque unique identifier.
-  </para>
+  <simpara>
+   An opaque unique identifier, or &false; if the job has not yet been initialized.
+  </simpara>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
-  <para>
-   <simplelist>
-    <member><methodname>GearmanClient::do</methodname></member>
-    <member><methodname>GearmanTask::uuid</methodname></member>
-   </simplelist>
-  </para>
+  <simplelist>
+   <member><methodname>GearmanClient::do</methodname></member>
+   <member><methodname>GearmanTask::uuid</methodname></member>
+  </simplelist>
  </refsect1>
 
 </refentry>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml

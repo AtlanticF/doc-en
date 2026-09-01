@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision$ -->
-<!--
-  Do NOT translate this file
--->
-<versions> 
+<?do-not-translate?>
+
+<versions>
  <function name="com" from="PHP 4 &gt;= 4.1.0, PHP 5, PHP 7, PHP 8"/>
  <function name="com::__construct" from="PHP 4 &gt; 4.1.0, PHP 5, PHP 7, PHP 8"/>
  <function name="com_create_guid" from="PHP 5, PHP 7, PHP 8"/>
@@ -14,6 +12,8 @@
  <function name="com_print_typeinfo" from="PHP 4 &gt;= 4.2.0, PHP 5, PHP 7, PHP 8"/>
 
  <function name="com_exception" from="PHP 5, PHP 7, PHP 8"/>
+
+ <function name="com-safearray-proxy" from="PHP 5, PHP 7, PHP 8"/>
 
  <function name="compersisthelper" from="PHP 5, PHP 7, PHP 8"/>
  <function name="compersisthelper::__construct" from="PHP 5, PHP 7, PHP 8"/>

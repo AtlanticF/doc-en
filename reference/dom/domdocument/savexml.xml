@@ -36,9 +36,7 @@
     <varlistentry>
      <term><parameter>options</parameter></term>
      <listitem>
-      <para>
-       Additional Options. Currently only <link linkend="libxml.constants">LIBXML_NOEMPTYTAG</link> is supported.
-      </para>
+      &dom.parameters.serialize.options;
      </listitem>
     </varlistentry>
    </variablelist>
@@ -53,6 +51,10 @@
  </refsect1>
  <refsect1 role="errors">
   &reftitle.errors;
+  <simpara>
+   May throw a <exceptionname>DOMException</exceptionname> with the
+   following error codes:
+  </simpara>
   <para>
    <variablelist>
     <varlistentry>
@@ -65,6 +67,28 @@
     </varlistentry>
    </variablelist>
   </para>
+ </refsect1>
+
+ <refsect1 role="changelog">
+  &reftitle.changelog;
+  <informaltable>
+   <tgroup cols="2">
+    <thead>
+     <row>
+      <entry>&Version;</entry>
+      <entry>&Description;</entry>
+     </row>
+    </thead>
+    <tbody>
+     <row>
+      <entry>8.3.0</entry>
+      <entry>
+       <link linkend="libxml.constants">LIBXML_NOXMLDECL</link> is now supported.
+      </entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </informaltable>
  </refsect1>
 
  <refsect1 role="examples">

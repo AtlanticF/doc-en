@@ -14,8 +14,8 @@
    <void />
   </methodsynopsis>
   <para>
-   Retrieve a table's column information,
-   and is instantiated by the RowResult::getColumns() method.
+   Retrieves a table's column information and is instantiated by the
+   <methodname>mysql_xdevapi\RowResult::getColumns</methodname> method.
   </para>
   
   &warn.undocumented.func;
@@ -28,9 +28,9 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
-   &true; if a given column as a signed type.
-  </para>
+  <simpara>
+   &true; if a given column has a signed type.
+  </simpara>
  </refsect1>
 
  <refsect1 role="examples">

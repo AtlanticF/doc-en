@@ -23,11 +23,20 @@
    <methodparam><type>DateTimeInterface</type><parameter>end</parameter></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
   </constructorsynopsis>
-  <constructorsynopsis role="DatePeriod">
-   <modifier>public</modifier> <methodname>DatePeriod::__construct</methodname>
-   <methodparam><type>string</type><parameter>isostr</parameter></methodparam>
-   <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
-  </constructorsynopsis>
+  <warning>
+   <simpara>
+    The following constructor variant has been deprecated:
+   </simpara>
+   <constructorsynopsis role="DatePeriod">
+    <modifier>public</modifier> <methodname>DatePeriod::__construct</methodname>
+    <methodparam><type>string</type><parameter>isostr</parameter></methodparam>
+    <methodparam choice="opt"><type>int</type><parameter>options</parameter><initializer>0</initializer></methodparam>
+   </constructorsynopsis>
+   <simpara>
+    This variant of the constructor is deprecated as of PHP 8.4.0, use
+    <methodname>DatePeriod::createFromISO8601String</methodname> instead.
+   </simpara>
+  </warning>
   <para>
    Creates a new DatePeriod object.
   </para>
@@ -132,6 +141,16 @@
   </para>
  </refsect1>
 
+ <refsect1 role="errors">
+  &reftitle.errors;
+  <para>
+   Throws an <classname>DateMalformedPeriodStringException</classname> when
+   the <parameter>isostr</parameter> cannot be parsed as a valid ISO 8601
+   period. Prior to PHP 8.3, this was
+   <exceptionname>Exception</exceptionname>.
+  </para>
+ </refsect1>
+
  <refsect1 role="changelog">
   &reftitle.changelog;
   <para>
@@ -144,6 +163,21 @@
       </row>
      </thead>
      <tbody>
+      <row>
+       <entry>8.4.0</entry>
+       <entry>
+        The signature using <parameter>isostr</parameter> has been deprecated,
+        use <methodname>DatePeriod::createFromISO8601String</methodname> instead.
+       </entry>
+      </row>
+      <row>
+       <entry>8.3.0</entry>
+       <entry>
+        Now throws
+        <exceptionname>DateMalformedPeriodStringException</exceptionname>
+        instead of <exceptionname>Exception</exceptionname>.
+       </entry>
+      </row>
       <row>
        <entry>8.2.0</entry>
        <entry>
@@ -186,12 +220,12 @@ $period = new DatePeriod($iso);
 foreach ($period as $date) {
     echo $date->format('Y-m-d')."\n";
 }
-?>
 ]]>
     </programlisting>
     &example.outputs;
     <screen>
 <![CDATA[
+Deprecated: Calling DatePeriod::__construct(string $isostr, int $options = 0) is deprecated, use DatePeriod::createFromISO8601String() instead in script on line 11
 2012-07-01
 2012-07-08
 2012-07-15
@@ -220,7 +254,6 @@ $period = new DatePeriod($start, $interval, $end,
 foreach ($period as $date) {
     echo $date->format('Y-m-d')."\n";
 }
-?>
 ]]>
     </programlisting>
     &example.outputs;
@@ -249,7 +282,6 @@ $period = new DatePeriod($begin, $interval, $end, DatePeriod::EXCLUDE_START_DATE
 foreach ($period as $dt) {
     echo $dt->format('l Y-m-d'), "\n";
 }
-?>
 ]]>
     </programlisting>
     &example.outputs;

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
-
-<refentry xml:id="gearmantask.isknown" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="gearmantask.isknown">
  <refnamediv>
   <refname>GearmanTask::isKnown</refname>
   <refpurpose>Determine if task is known</refpurpose>
@@ -9,13 +8,13 @@
 
  <refsect1 role="description">
   &reftitle.description;
-  <methodsynopsis>
+  <methodsynopsis role="GearmanTask">
    <modifier>public</modifier> <type>bool</type><methodname>GearmanTask::isKnown</methodname>
-   <void />
+   <void/>
   </methodsynopsis>
-  <para>
+  <simpara>
    Gets the status information for whether or not this task is known to the job server.
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -25,13 +24,12 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
+  <simpara>
    &true; if the task is known, &false; otherwise.
-  </para>
+  </simpara>
  </refsect1>
 
 </refentry>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml
